@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Vitoria: {fileID: 1236858095}
   tempo: {fileID: 1001048903}
   fase: {fileID: 2124622599}
+  zerou: 0
 --- !u!4 &40434990
 Transform:
   m_ObjectHideFlags: 0
@@ -669,6 +670,24 @@ MonoBehaviour:
   - m_Character: '-'
     m_Prefab: {fileID: 6676692209244693938, guid: 34a5f940560686240b6da817d3270df9,
       type: 3}
+  - m_Character: W
+    m_Prefab: {fileID: 3034549456591236211, guid: 1782b4bae2c7638429a8cc5c39f493ca,
+      type: 3}
+  - m_Character: Z
+    m_Prefab: {fileID: 9208909760749035119, guid: c8eae49294a313740a99c3d15078fbc8,
+      type: 3}
+  - m_Character: O
+    m_Prefab: {fileID: 3949104104918156216, guid: 6585972e5b313f24a93e756fef0f735e,
+      type: 3}
+  - m_Character: M
+    m_Prefab: {fileID: 8189826449320003028, guid: 313702cb55f807c498c0a19a2cd42104,
+      type: 3}
+  - m_Character: I
+    m_Prefab: {fileID: 8343833884832188530, guid: d86d651b4139aea41b04eb6677496d64,
+      type: 3}
+  - m_Character: V
+    m_Prefab: {fileID: 8718590318218607583, guid: fc442fa63777ab44986ed9a914099f0d,
+      type: 3}
   fase: 0
   faseText: {fileID: 2124622601}
 --- !u!114 &1062320303
@@ -686,6 +705,7 @@ MonoBehaviour:
   filename: Tutorial
   filenameNew: Levels
   m_Levels: []
+  is_tutorial: 0
 --- !u!4 &1062320305
 Transform:
   m_ObjectHideFlags: 0
@@ -989,6 +1009,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236858095}
   m_CullTransparentMesh: 0
+--- !u!1 &1398606734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1398606736}
+  - component: {fileID: 1398606735}
+  m_Layer: 0
+  m_Name: Game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1398606735
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398606734}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 15bcd47e5577bc844b777537ee67067e, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 8532597383304951225, guid: 15bcd47e5577bc844b777537ee67067e, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1398606736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398606734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1430842589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,6 +1390,7 @@ GameObject:
   - component: {fileID: 1785174242}
   - component: {fileID: 1785174241}
   - component: {fileID: 1785174240}
+  - component: {fileID: 1785174244}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1416,6 +1487,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &1785174244
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785174239}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 96d790bcddb643b4fa92378f525d2a56, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1886620586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,6 +1921,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908076199049093733, guid: 56fec27a4611cca46b7891be25d8a5ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3908076199049093721, guid: 56fec27a4611cca46b7891be25d8a5ba,
         type: 3}

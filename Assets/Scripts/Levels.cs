@@ -36,7 +36,6 @@ public class Levels : MonoBehaviour
 
     void Awake()
     { 
-        // tutorial = GetComponent<Fluxo>();
         TextAsset textAsset; 
         textAsset = (TextAsset)Resources.Load(filename);
             if(!textAsset)
@@ -62,7 +61,7 @@ public class Levels : MonoBehaviour
                 continue;
             }
             m_Levels[m_Levels.Count - 1].m_Rows.Add(line); //Always adding level rows to last level in list of levels
-            
         }
+
     }
 }

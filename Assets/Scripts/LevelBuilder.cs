@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 [System.Serializable]
 public class LevelElement //defines each item in a level by mapping a single character(ie #)
@@ -33,7 +34,7 @@ public class LevelBuilder : MonoBehaviour
         m_CurrentLevel++;
         if(m_CurrentLevel >= GetComponent<Levels>().m_Levels.Count)
         { 
-            m_CurrentLevel = 0;
+            SceneManager.LoadSceneAsync ("Victory");
         }
         fase = m_CurrentLevel + 1;
     }
@@ -56,7 +57,6 @@ public class LevelBuilder : MonoBehaviour
                     Debug.Log(prefab.name);
                     Instantiate(prefab, new Vector3(x,y,0), Quaternion.identity);
                 }
-                
                 x++;
             }
             y++;

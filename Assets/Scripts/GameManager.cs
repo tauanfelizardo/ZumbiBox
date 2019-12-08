@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour {
 
     private bool m_ReadyForInput;
     private Player m_Player;
+
+    public bool zerou = false;
     
 
     void Start()
@@ -50,10 +52,10 @@ public class GameManager : MonoBehaviour {
     }
     public void NextLevel()
     { 
-        m_NextButton.SetActive(false);
-        m_LevelBuilder.NextLevel();
-        m_LevelBuilder.Build();
-        StartCoroutine(ResetSceneASync());
+            m_NextButton.SetActive(false);
+            m_LevelBuilder.NextLevel();
+            m_LevelBuilder.Build();
+            StartCoroutine(ResetSceneASync());        
     }
 
     public void ResetScene()
@@ -97,6 +99,4 @@ public class GameManager : MonoBehaviour {
             Debug.Log("Level Loaded");
             tempo.GetComponent<Cronometro>().tempoAtual = 0;
     }
-
-
 }
